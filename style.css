@@ -1,0 +1,23 @@
+/* Animasi Reveal */
+.reveal {
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+/* Tambahan: Efek Smooth Hover pada Tombol */
+.btn {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: inline-block;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #0077ed;
+}

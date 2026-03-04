@@ -1,0 +1,48 @@
+<header id="home" class="hero reveal">
+        <h1>iPhone 15 Pro</h1>
+        <p>Titanium. Kuat. Ringan. Pro.</p>
+        <a href="#produk" class="btn">Beli Sekarang</a>
+    </header>
+
+    <section id="produk" class="products">
+        <h2 class="reveal">Lini Produk Terbaru</h2>
+        <div class="grid">
+            <div class="card reveal">
+                <div class="product-img"></div>
+                <h3>iPhone 15 Pro</h3>
+                <p>Mulai dari Rp 18.999.000</p>
+            </div>
+            <div class="card reveal">
+                <div class="product-img"></div>
+                <h3>iPhone 15</h3>
+                <p>Mulai dari Rp 15.499.000</p>
+            </div>
+            <div class="card reveal">
+                <div class="product-img"></div>
+                <h3>iPhone 14</h3>
+                <p>Mulai dari Rp 12.999.000</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        window.addEventListener('scroll', reveal);
+
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var revealTop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = 150;
+
+                if (revealTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        
+        // Jalankan sekali saat load untuk elemen di atas
+        reveal();
+    </script>
+</body>
